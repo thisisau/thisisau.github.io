@@ -92,14 +92,14 @@
         <script src="../../js/main.js"></script>
         <script>
             function setMac() {
-                var osSelector = `<a onclick="setWin()">Windows</a> | Mac OS`
+                var osSelector = `<a onclick="setWin()" href="#">Windows</a> | Mac OS`
                 var installMMC = `Drag the file to your desktop, then double click on it to extract. Run the keyboard shortcut <b>Cmd+Shift+H</b>. Navigate to the Applications folder, or create it if it doesn't exist. Drag the extracted MultiMC application to the Applications folder.`
                 var adoptium = `Click on the .tar.gz download next to the latest macOS release. Once it has finished downloading, double click it to extract. Run the shortcut <b>Cmd+Shift+G</b>, and paste in <b>~/Library</b>. Navigate to the following folders, or create them (with the exact same name and case): <b>Java</b>, <b>JavaVirtualMachines</b>. If there are any folders in JavaVirtualMachines, delete them and drag the jdk folder you just unzipped to JavaVirtualMachines.`
                 var shortcut = `<b>Cmd+Shift+G</b>, and then paste in <b>~/Library/Application Support/minecraft</b> and hit Enter.`
                 setOS(osSelector, installMMC, adoptium, shortcut)
             }
             function setWin() {
-                var osSelector = `Windows | <a onclick="setMac()">Mac OS</a>`
+                var osSelector = `Windows | <a onclick="setMac()" href="#">Mac OS</a>`
                 var installMMC = `<p>Move the downloaded file to your desktop. Right click on it, and click "Extract All", and then click "Extract".</p>
                 <div center><img src="media/win_img_1.png" height=400> <img src="media/win_img_2.png" height=400></div>
                 <p>Next, find MultiMC.exe (if file extensions are disabled, this may appear as MultiMC). Pin it to the start menu or drag it to the taskbar to allow you to easily open it in the future. Finally, move the mmc-stable-win32 folder to your Documents folder.</p>

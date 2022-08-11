@@ -12,6 +12,15 @@ body {
     border-color: black;
 }
 
+.term {
+    background-color: #211b35;
+    font-family: monospace;
+}
+
+.light-mode .term {
+    background-color: #e0e0e0;
+}
+
 hr {border: 1px solid white;}
 
 .light-mode hr {border: 1px solid black;}

@@ -25,6 +25,7 @@
                                 <li><a href="#mmc-fabric-setup">Setting Up Fabric</a></li>
                                 <li><a href="#transfer">Transferring Settings</a></li>
                                 <li><a href="#other-mods">OptiFine and Other Mods</a></li>
+                                <li><a href="#mac-issues">Giving the mod microphone access (Mac OS)</a></li>
                             </ol>
                         </li>
                     </ol>
@@ -54,7 +55,7 @@
                     <div center><img src="media/add_instance.png" height="349"> <img src="media/add_instance_2.png" height="349"></div>
                     <p>Back in the main menu, click on Edit Instance. Install Fabric by clicking on the button on the right, followed by clicking OK. Click on Install mods (below Install Fabric) to view the mod menu.</p>
                     <div center><img src="media/edit_instance.png" height="375"></div>
-                    <p>Download the <a href="https://modrinth.com/mod/fabric-api" target="_blank">Fabric API</a> mod (for version 1.19) and the <a href="https://modrinth.com/mod/simple-voice-chat/" target="_blank">Simple Voice Chat</a> mod (the one labeled [FABRIC][1.19]). Once downloaded, drag and drop them into the Loader mods window.</p>
+                    <p>Download the <a href="https://modrinth.com/mod/fabric-api" target="_blank">Fabric API</a> mod (for version 1.19) and the <a href="https://modrinth.com/mod/simple-voice-chat/" target="_blank">Simple Voice Chat</a> mod (the one labeled <span class=term>[FABRIC][1.19]</span>). Once downloaded, drag and drop them into the Loader mods window.</p>
                 </div>
                 <br>
                 <div id="transfer">
@@ -88,14 +89,21 @@
                     <p>If you do need to use <a href="https://optifine.net/">OptiFine</a>, you need to use the <a href="https://www.curseforge.com/minecraft/mc-mods/optifabric">OptiFabric</a> mod with it for it to properly function with Fabric. Install both jar files like you would for any other mod.</p>
                 </div>
             </div>
+            <div id="mac-issues">
+                <h3 center>Giving the mod microphone access (Mac OS)</h3>
+                <p>Try doing this if Minecraft doesn't have access to the microphone. Taken from the <a href="https://github.com/henkelmax/simple-voice-chat/tree/1.18.1/macos#how-to-patch-your-launcher
+">Simple Voice Chat Github page</a>:</p>
+                <p>Right click on the MultiMC app icon, and click on Show in Finder. Right click on the app icon in Finder. Hold down the option key, and click on "Copy MultiMC as pathname".</p>
+                <p>Open Terminal and type in <span class=term>codesign --force --deep --sign - pathname</span>, but replace <span class=term>pathname</span> with the path you just copied. Press enter. After restarting Minecraft, it should have access to the microphone.</p>
+            </div>
         </div>
         <script src="../../js/main.js"></script>
         <script>
             function setMac() {
                 var osSelector = `<a onclick="setWin()" href="#">Windows</a> | Mac OS`
                 var installMMC = `Drag the file to your desktop, then double click on it to extract. Run the keyboard shortcut <b>Cmd+Shift+H</b>. Navigate to the Applications folder, or create it if it doesn't exist. Drag the extracted MultiMC application to the Applications folder.`
-                var adoptium = `Click on the .tar.gz download next to the latest macOS release. Once it has finished downloading, double click it to extract. Run the shortcut <b>Cmd+Shift+G</b>, and paste in <b>~/Library</b>. Navigate to the following folders, or create them (with the exact same name and case): <b>Java</b>, <b>JavaVirtualMachines</b>. If there are any folders in JavaVirtualMachines, delete them and drag the jdk folder you just unzipped to JavaVirtualMachines.`
-                var shortcut = `<b>Cmd+Shift+G</b>, and then paste in <b>~/Library/Application Support/minecraft</b> and hit Enter.`
+                var adoptium = `Click on the .tar.gz download next to the latest macOS release. Once it has finished downloading, double click it to extract. Run the shortcut <b>Cmd+Shift+G</b>, and paste in <span class=term>~/Library</span>. Navigate to the following folders, or create them (with the exact same name and case): <span class=term>Java</span>, <span class=term>JavaVirtualMachines</span>. If there are any folders in JavaVirtualMachines, delete them and drag the jdk folder you just unzipped to JavaVirtualMachines.`
+                var shortcut = `<b>Cmd+Shift+G</b>, and then paste in <span class=term>~/Library/Application Support/minecraft</span> and hit Enter.`
                 setOS(osSelector, installMMC, adoptium, shortcut)
             }
             function setWin() {
@@ -105,7 +113,7 @@
                 <p>Next, find MultiMC.exe (if file extensions are disabled, this may appear as MultiMC). Pin it to the start menu or drag it to the taskbar to allow you to easily open it in the future. Finally, move the mmc-stable-win32 folder to your Documents folder.</p>
                 <p>When you open MultiMC for the first time, a pop-up looking similar to the one below may appear. Windows does this when an executable file it doesn't recognize is opened. MultiMC was not installed through an executable or installer file, causing this to happen. Click on <b>More info</b>, followed by <b>Run anyway</b>.<div center><img src="media/win_img_3.png" height=500>`
                 var adoptium = `Click on the .msi download next to the latest Windows release. Once the file finishes downloading, open it, click Next twice, then click Install.`
-                var shortcut = `<b>Win+R</b>, and then paste in <b>%APPDATA%\\.minecraft</b> and hit Enter.`
+                var shortcut = `<b>Win+R</b>, and then paste in <span class=term>%APPDATA%\\.minecraft</span> and hit Enter.`
                 setOS(osSelector, installMMC, adoptium, shortcut)
             }
             function setOS(osSelector, installMMC, adoptium, shortcut) {

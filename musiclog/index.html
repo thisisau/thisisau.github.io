@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <meta charset="utf-8">
+    <title>musiclog</title>
+</head>
+<html>
+    <body>
+        <main-header id="header"></main-header>
+        <div class="main-content thin-center" center>
+            <h1>Music Depository</h1>
+            <p>This is where I will put all of the music I compose. It probably isn't that good.</p>
+            <hr>
+            <table class="round thin-center itctc show-interior-borders hover-color">
+                <tr class="first">
+                    <td>Date</td>
+                    <td>Music</td>
+                    <td>PDF</td>
+                </tr>
+                <tr>
+                    <td>16 Jun 2022</td>
+                    <td><audio controls src="music/2022-06-16.wav"></audio></td>
+                    <td id="220616"><a href="#" onclick='concert_pitch(true, "220616", "music/2022-06-16.pdf", "music/2022-06-16-c.pdf")'>[link]</a></td>
+                </tr>
+                <tr>
+                    <td>27 Apr 2022</td>
+                    <td><audio controls src="music/2022-04-27.wav"></audio></td>
+                    <td><a href="music/2022-04-27.pdf" target="_blank">[link]</a></td>
+                </tr>
+                <tr>
+                    <td>26 Apr 2022</td>
+                    <td><audio controls src="music/2022-04-26.wav"></audio></td>
+                    <td id="220426"><a href="#" onclick='concert_pitch(true, "220426", "music/2022-04-26.pdf", "music/2022-04-26-c.pdf")'>[link]</a></td>
+                </tr>
+                <tr>
+                    <td>16 Apr 2022</td>
+                    <td><audio controls src="music/2022-04-16.wav"></audio></td>
+                    <td><a href="music/2022-04-16.pdf" target="_blank">[link]</a></td>
+                </tr>
+                <tr>
+                    <td>15 Apr 2022</td>
+                    <td><audio controls src="music/2022-04-15.wav"></audio></td>
+                    <td><a href="music/2022-04-15.pdf" target="_blank">[link]</a></td>
+                </tr>
+                <tr>
+                    <td>14 Apr 2022</td>
+                    <td><audio controls src="music/2022-04-14.wav"></audio></td>
+                    <td><a href="music/2022-04-14.pdf" target="_blank">[link]</a></td>
+                </tr>
+            </table>
+        </div>
+        <script src="../js/main.js"></script>
+        <script src="scripts.js"></script>
+    </body>
+</html>

@@ -48,6 +48,7 @@ div.main-content {
     border: 1px solid;
     width: 512px;
     margin: 0 auto;
+    max-width: 95%;
 }
 
 .box-padding {
@@ -56,10 +57,65 @@ div.main-content {
 
 .thin-center {
     width: 1024px;
+    max-width: 95%;
     margin: 0 auto;
 }
 
+.itctc {
+    max-width: 100%;
+}
+
+.thin-center img {
+    max-width: 100%;
+}
+
 .center-block {width: 100%; margin: 0 auto}
+
+#footer {
+    height: 36px;
+    overflow: auto;
+    vertical-align: middle;
+    border-color: white;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    width: 98%;
+    margin: 1%;
+    margin-top: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.round {
+    border: solid ;
+    border-radius: 15px;
+    border-spacing: 0px;
+}
+
+table.round tr, table.round td {
+    text-align: center;
+    border-left: solid;
+    border-top: solid;
+    padding: 2px;
+}
+table.round .first, table.round .first * {
+    border-top: none;
+}
+
+table.hover-color td:hover {
+    background-color: #211b35;
+}
+
+.light-mode table.hover-color td:hover {
+    background-color: #e6e6e6;
+}
+
+table.round tr:first-child, table.round td:first-child {
+  border-left: none;
+}
 
 /* Header styles */
 #header {
@@ -79,11 +135,11 @@ div.main-content {
     align-content: center;
     flex-direction: column;
 }
-.header-content {
+.header-content, .footer-content {
     padding-left: 1%;
     padding-right: 1%;
 }
-.light-mode #header {
+.light-mode #header, .light-mode #footer {
     border-color: black;
 }
 .light-dark {

@@ -119,6 +119,10 @@ table.round tr:first-child, table.round td:first-child {
 .musiclog-table tr {
     min-height: 45px;
 }
+audio {
+    width: 100%;
+    vertical-align: middle;
+}
 
 /* Header styles */
 #header {

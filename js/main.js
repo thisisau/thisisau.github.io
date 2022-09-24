@@ -1,7 +1,25 @@
-function toggleLightMode() {
+function toggleLightMode(init=0) {
+    var theme_choice;
     var element = document.body
-    element.classList.toggle("light-mode");
-}
+    if (init===1) {
+      theme_choice = localStorage.getItem("light_mode");
+    }
+    else {
+      if (element.classList.contains("light-mode")) {
+        theme_choice = "dark";
+      } else {
+        theme_choice = "light";
+      }
+    }
+    localStorage.setItem("light_mode", theme_choice);
+    if (theme_choice == "light") {
+      element.classList.add("light-mode");
+    } else {
+      element.classList.remove("light-mode");
+    }
+  }
+
+toggleLightMode(1)
 
 var website_name = 'http://th1s1sau.github.io'
 

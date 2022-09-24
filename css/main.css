@@ -116,6 +116,9 @@ table.hover-color td:hover {
 table.round tr:first-child, table.round td:first-child {
   border-left: none;
 }
+.musiclog-table tr {
+    min-height: 45px;
+}
 
 /* Header styles */
 #header {

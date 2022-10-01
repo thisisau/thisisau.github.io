@@ -21,13 +21,13 @@ function toggleLightMode(init=0) {
 
 toggleLightMode(1)
 
-var website_name = 'http://th1s1sau.github.io'
+var website_name = 'http://thisisau.github.io'
 
 class Header extends HTMLElement {
     connectedCallback() {
       this.innerHTML = `
         <table class="header-content"><tr>
-            <td class="home-link"><b><a href="${website_name}">th1s1sau</a></b>&nbsp;&nbsp;&nbsp;<a href="${website_name}/musiclog">musiclog</a></td>
+            <td class="home-link"><b><a href="${website_name}">thisisau</a></b>&nbsp;&nbsp;&nbsp;<a href="${website_name}/musiclog">musiclog</a></td>
             <td class="light-dark"><a href="#" onclick="parent.toggleLightMode()">Light/Dark</a></td>
         </tr></table>
       `;

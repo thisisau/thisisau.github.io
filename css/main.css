@@ -71,6 +71,16 @@ div.main-content {
 
 .center-block {width: 100%; margin: 0 auto}
 
+.border {
+    border: solid white 2px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.light-mode .border {
+    border-color: black;
+}
+
 #footer {
     height: 36px;
     overflow: auto;
